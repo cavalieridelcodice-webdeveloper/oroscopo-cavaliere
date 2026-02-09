@@ -29,7 +29,30 @@ const Hero = () => {
     "La forza non è solo nella spada, ma nel cuore di chi la impugna.",
     "Guarda il cielo: i pianeti oggi tramano per il tuo successo.",
     "Ogni sfida è un'opportunità per mostrare il tuo valore.",
-    "Il coraggio è la tua bussola nel mare del cosmo."
+    "Il coraggio è la tua bussola nel mare del cosmo.",
+    "Il tuo Cosmo brucia con l'intensità di mille soli.",
+    "Non temere l'eclissi, la tua luce interiore è inestinguibile.",
+    "Le stelle non cadono, tracciano la rotta per chi sa sognare.",
+    "Anche la notte più oscura cede il passo all'alba della giustizia.",
+    "Il destino è un filo d'oro teso tra le mani del cercatore.",
+    "La tua volontà è più dura della corazza più resistente.",
+    "Risveglia il settimo senso e trasforma l'impossibile in realtà.",
+    "Ogni cicatrice racconta la storia di una battaglia vinta nel nome dell'onore.",
+    "Le orbite dei pianeti danzano al ritmo del tuo spirito indomito.",
+    "La saggezza degli antichi risuona nel silenzio delle galassie.",
+    "Sii come la stella polare: fermo, lucente e punto di riferimento.",
+    "L'universo non ti ostacola, ti mette alla prova per renderti leggenda.",
+    "Un cuore puro può spostare le montagne e deviare le comete.",
+    "Ascolta il battito dell'universo, batte all'unisono con il tuo.",
+    "La vera nobiltà risiede nel proteggere chi non può difendersi.",
+    "Nessun abisso è troppo profondo per chi possiede ali di luce.",
+    "Il Cosmo è infinito, proprio come il potenziale che porti dentro.",
+    "Scolpisci il tuo nome tra gli astri con le azioni di oggi.",
+    "L'equilibrio tra le forze celesti si riflette nella tua serenità.",
+    "Non contare le stelle, fai in modo che ogni stella conti per te.",
+    "L'energia del vuoto cosmico è il motore della tua determinazione.",
+    "Oltre la nebulosa del dubbio, brilla la chiarezza del tuo scopo.",
+    "Sei un frammento d'universo che ha deciso di brillare di luce propria."
   ];
 
   const zodiacSigns = [

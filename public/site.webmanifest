@@ -1,9 +1,19 @@
 {
+  "id": "com.oroscopo.cavaliere",
   "name": "L'Oroscopo del Cavaliere",
   "short_name": "Oroscopo",
   "description": "Previsioni astrali quotidiane ispirate ai Cavalieri dello Zodiaco.",
-  "start_url": "/",
+  "categories": [
+    "lifestyle",
+    "entertainment"
+  ],
+  "start_url": ".",
+  "scope": "/",
   "display": "standalone",
+  "display_override": [
+    "window-controls-overlay",
+    "minimal-ui"
+  ],
   "background_color": "#0b0e14",
   "theme_color": "#1a1f2c",
   "orientation": "portrait",
