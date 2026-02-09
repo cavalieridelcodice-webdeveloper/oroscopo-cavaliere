@@ -34,12 +34,18 @@ const SignPersonalityModal = ({ sign, onClose }) => {
     if (!sign) return null;
 
     // Prevent background scrolling when modal is open
+    // Prevent background scrolling when modal is open
     useEffect(() => {
         document.body.style.overflow = 'hidden';
         return () => {
-            document.body.style.overflow = '';
+            document.body.style.overflow = 'auto';
         };
     }, []);
+
+    const handleClose = () => {
+        document.body.style.overflow = 'auto'; // Immediate cleanup
+        onClose();
+    };
 
     // Use the ID to get the correct image. 
     // IMPORTANT: The IDs in zodiacSigns.js are 'aries', 'taurus' etc (English), 
@@ -66,7 +72,7 @@ const SignPersonalityModal = ({ sign, onClose }) => {
     return (
         <div className="personality-modal-overlay">
             <div className="personality-modal-content">
-                <button className="personality-modal-close" onClick={onClose}>
+                <button className="personality-modal-close" onClick={handleClose}>
                     &times;
                 </button>
 
