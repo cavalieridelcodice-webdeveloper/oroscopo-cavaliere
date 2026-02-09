@@ -1,0 +1,120 @@
+.sign-personality-nav {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    font-family: 'Cinzel', serif;
+}
+
+.nav-trigger {
+    background: rgba(10, 10, 25, 0.8);
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.1);
+}
+
+.nav-trigger:hover,
+.nav-trigger.active {
+    background: rgba(255, 215, 0, 0.1);
+    border-color: #ffd700;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+}
+
+.nav-label {
+    color: #ffd700;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    user-select: none;
+}
+
+.nav-arrow {
+    color: #ffd700;
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.nav-trigger.active .nav-arrow {
+    transform: rotate(180deg);
+}
+
+.nav-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 200px;
+    margin-top: 10px;
+    background: rgba(10, 10, 25, 0.95);
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+.nav-dropdown.open {
+    max-height: 500px;
+    /* Adjust based on content */
+    opacity: 1;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nav-item:last-child {
+    border-bottom: none;
+}
+
+.nav-btn {
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    padding: 12px 20px;
+    color: #e0e0e0;
+    font-family: 'Inter', sans-serif;
+    /* Cleaner font for list */
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.nav-btn:hover {
+    background: rgba(255, 215, 0, 0.1);
+    color: #ffd700;
+    padding-left: 25px;
+    /* Slight movement on hover */
+}
+
+@media (max-width: 768px) {
+    .sign-personality-nav {
+        top: 15px;
+        left: 15px;
+    }
+
+    .nav-trigger {
+        padding: 8px 15px;
+    }
+
+    .nav-label {
+        font-size: 0.9rem;
+    }
+}

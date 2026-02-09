@@ -1,0 +1,14 @@
+.zodiac-icon-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.zodiac-card:hover .zodiac-icon-img {
+  filter: brightness(1.2) drop-shadow(0 0 8px var(--color-gold));
+  transform: scale(1.1);
+  box-shadow: 0 4px 16px rgba(212, 175, 55, 0.4);
+}

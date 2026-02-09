@@ -1,0 +1,24 @@
+{
+  "name": "L'Oroscopo del Cavaliere",
+  "short_name": "Oroscopo",
+  "description": "Previsioni astrali quotidiane ispirate ai Cavalieri dello Zodiaco.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0b0e14",
+  "theme_color": "#1a1f2c",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

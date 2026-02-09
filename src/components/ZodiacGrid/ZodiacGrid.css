@@ -1,0 +1,119 @@
+.zodiac-grid-container {
+  padding: 2rem 0;
+}
+
+.zodiac-grid {
+  display: grid;
+  /* Default responsive behavior */
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+  max-width: 1400px;
+  /* Aumentato per 6 colonne */
+  margin: 0 auto;
+}
+
+/* Force 6 columns on large screens */
+@media (min-width: 1200px) {
+  .zodiac-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+.zodiac-card {
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 1.5rem 1rem;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  /* Aumento luminosità e saturazione per rendere le immagini meno "spente" */
+  filter: brightness(2.5) saturate(1.2);
+}
+
+/* Overlay scuro per migliorare la leggibilità del testo */
+.zodiac-card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Gradiente leggermente più trasparente per far vedere meglio l'immagine */
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 100%);
+  transition: all 0.4s ease;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Contenuto della card (nome e date) */
+.zodiac-card-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  width: 100%;
+}
+
+.zodiac-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(129, 140, 248, 0.4);
+  border-color: var(--color-primary);
+  background-size: 110%;
+}
+
+.zodiac-card:hover .zodiac-card-overlay {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.2) 100%);
+}
+
+.zodiac-name {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  letter-spacing: 1.5px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.zodiac-dates {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Stile per elemento selezionato (opzionale se vogliamo mantenerlo evidenziato) */
+.zodiac-card.active {
+  border-color: var(--color-gold);
+  box-shadow: 0 0 20px rgba(251, 191, 36, 0.6);
+}
+
+/* Responsive per schermi piccoli */
+@media (max-width: 768px) {
+  .zodiac-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+
+  .zodiac-card {
+    min-height: 180px;
+  }
+
+  .zodiac-name {
+    font-size: 0.95rem;
+  }
+
+  .zodiac-dates {
+    font-size: 0.75rem;
+  }
+}

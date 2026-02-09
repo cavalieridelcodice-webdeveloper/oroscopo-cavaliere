@@ -1,0 +1,471 @@
+/* Importazione Font Epico */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+
+.hero {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #020617;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  z-index: 1;
+  filter: brightness(1) contrast(1.1);
+  animation: slowZoom 20s infinite alternate ease-in-out;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Gradiente radiale per proteggere la leggibilità del testo al centro */
+  background: radial-gradient(circle, rgba(2, 6, 23, 0.3) 0%, rgba(2, 6, 23, 0.8) 100%);
+  z-index: 2;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  padding: 0 20px;
+  max-width: 900px;
+  /* Leggero spostamento verso l'alto per non coprire l'elmo se necessario */
+  margin-top: -10px;
+  animation: fadeIn 2s ease-out;
+}
+
+.hero-title {
+  font-family: 'Cinzel', serif;
+  font-size: 4rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+
+  /* Effetto Testo Argentato/Metallico */
+  background: linear-gradient(to bottom, #ffffff 20%, #a5a5a5 100%);
+
+  /* Proprietà per il gradiente sul testo (correzione errore riga 56) */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* Ombra esterna per profondità */
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.2));
+}
+
+.hero-divider {
+  width: 120px;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #38bdf8, transparent);
+  margin: 25px auto;
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.5);
+}
+
+.hero-subtitle {
+  font-family: 'Cinzel', serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #e2e8f0;
+  letter-spacing: 2px;
+  font-style: italic;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 30px;
+  z-index: 10;
+  animation: bounce 2s infinite;
+  color: #38bdf8;
+  font-size: 3rem;
+}
+
+/* --- Zodiac Orbit Animation --- */
+
+.zodiac-orbit-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  z-index: 5;
+  /* Dietro al testo (z-index 10) ma sopra l'overlay (z-index 2) */
+  pointer-events: none;
+  /* Non blocca i click sul testo */
+}
+
+.zodiac-orbit-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: orbit-spin 120s linear infinite;
+  /* Rotazione lenta dell'anello */
+}
+
+.zodiac-orbit-spoke {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* La rotazione è definita inline nel JSX */
+}
+
+.zodiac-orbit-distance {
+  /* Definisce il raggio dell'orbita. Aumento il raggio per allontanare le icone dal testo centrale */
+  transform: translateY(-350px);
+}
+
+.zodiac-orbit-counter-spin {
+  /* Contro-rotazione per annullare la rotazione dell'anello principale */
+  animation: orbit-spin-reverse 120s linear infinite;
+}
+
+.zodiac-orbit-correction {
+  /* Correzione statica per mantenere l'immagine dritta rispetto all'angolo dello spoke (inline) */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.zodiac-orbit-item {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  filter: brightness(1.2) saturate(1.2);
+  /* Ripristino pointer-events per tooltip se necessario, ma è dietro al content... */
+  pointer-events: auto;
+}
+
+/* --- Animazioni --- */
+
+@keyframes orbit-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes orbit-spin-reverse {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes slowZoom {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-12px);
+  }
+
+  60% {
+    transform: translateY(-6px);
+  }
+}
+
+/* --- Mobile Responsiveness --- */
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.2rem;
+    letter-spacing: 3px;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+    padding: 0 15px;
+  }
+
+  .hero-divider {
+    width: 80px;
+    margin: 15px auto;
+  }
+
+  /* Ottimizzazione immagine per tablet e smartphone */
+  .hero-background {
+    background-size: cover;
+    background-position: center center;
+  }
+}
+
+/* Media query per smartphone molto piccoli */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  /* Assicura che l'immagine sia sempre centrata anche su schermi piccoli */
+  .hero-background {
+    background-size: cover;
+    background-position: center center;
+  }
+}
+
+@media (max-width: 1024px) {
+
+  /* Nascondo l'animazione orbitale su tablet e mobile perché occuperebbe troppo spazio */
+  .zodiac-orbit-container {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  /* --- Mobile Magic Animations --- */
+
+  .mobile-stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    /* Z-index alto per essere sicuri che si vedano sopra l'overlay */
+    pointer-events: none;
+  }
+
+  /* Stelle Scintillanti - Forma a 4 punte */
+  .star {
+    position: absolute;
+    width: 12px;
+    /* Aumentato per vedere bene la forma */
+    height: 12px;
+    background: white;
+    /* Forma a stella a 4 punte (scintilla) */
+    clip-path: polygon(50% 0%, 65% 40%, 100% 50%, 65% 60%, 50% 100%, 35% 60%, 0% 50%, 35% 40%);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 1);
+    opacity: 0;
+    animation: twinkle 4s infinite ease-in-out;
+  }
+
+  /* Posizioni casuali per le 8 stelle */
+  .star-1 {
+    top: 15%;
+    left: 10%;
+    animation-delay: 0s;
+  }
+
+  .star-2 {
+    top: 25%;
+    left: 80%;
+    animation-delay: 1.5s;
+    width: 10px;
+    height: 10px;
+  }
+
+  .star-3 {
+    top: 60%;
+    left: 15%;
+    animation-delay: 2.5s;
+  }
+
+  .star-4 {
+    top: 75%;
+    left: 70%;
+    animation-delay: 0.5s;
+    width: 14px;
+    height: 14px;
+  }
+
+  .star-5 {
+    top: 40%;
+    left: 50%;
+    animation-delay: 3s;
+  }
+
+  .star-6 {
+    top: 10%;
+    left: 60%;
+    animation-delay: 1.2s;
+    width: 9px;
+    height: 9px;
+  }
+
+  .star-7 {
+    top: 85%;
+    left: 30%;
+    animation-delay: 2.8s;
+  }
+
+  .star-8 {
+    top: 50%;
+    left: 90%;
+    animation-delay: 0.8s;
+    width: 11px;
+    height: 11px;
+  }
+
+  /* Configurazione Base Stella Cadente */
+  .shooting-star {
+    position: absolute;
+    height: 3px;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+    filter: drop-shadow(0 0 5px white);
+    opacity: 0;
+  }
+
+  .shooting-star::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 6px;
+    background: white;
+    clip-path: polygon(50% 0%, 65% 40%, 100% 50%, 65% 60%, 50% 100%, 35% 60%, 0% 50%, 35% 40%);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 1);
+  }
+
+  /* Stella Cadente 1 - Da Sinistra a Destra (in alto) */
+  .shooting-star-1 {
+    width: 140px;
+    top: 15%;
+    left: -150px;
+    transform: rotate(-35deg);
+    animation: shoot-right 12s infinite linear;
+    animation-delay: 2s;
+  }
+
+  .shooting-star-1::before {
+    right: 0;
+  }
+
+  /* Stella Cadente 2 - Da Destra a Sinistra (più in basso) */
+  .shooting-star-2 {
+    width: 100px;
+    top: 60%;
+    right: -150px;
+    transform: rotate(35deg);
+    /* Angolo opposto */
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+    /* Gradiente invertito */
+    animation: shoot-left 15s infinite linear;
+    animation-delay: 8s;
+    /* Parte molto dopo */
+  }
+
+  .shooting-star-2::before {
+    left: 0;
+  }
+
+  /* Testa della stella a sinistra */
+}
+
+/* --- Animazioni Mobile --- */
+
+@keyframes twinkle {
+
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.3) rotate(180deg);
+  }
+
+  /* Aggiunta rotazione per effetto scintillio */
+}
+
+@keyframes shoot-right {
+  0% {
+    left: -150px;
+    top: 15%;
+    opacity: 1;
+  }
+
+  10% {
+    left: 120%;
+    top: 70%;
+    opacity: 0;
+  }
+
+  100% {
+    left: 120%;
+    top: 70%;
+    opacity: 0;
+  }
+}
+
+@keyframes shoot-left {
+  0% {
+    right: -150px;
+    top: 60%;
+    opacity: 1;
+  }
+
+  10% {
+    right: 120%;
+    top: 10%;
+    opacity: 0;
+  }
+
+  100% {
+    right: 120%;
+    top: 10%;
+    opacity: 0;
+  }
+}

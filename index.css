@@ -1,0 +1,70 @@
+:root {
+  --color-bg-dark: #0f172a;
+  --color-bg-darker: #020617;
+  --color-primary: #818cf8; /* Indigo */
+  --color-accent: #c084fc; /* Purple */
+  --color-gold: #fbbf24;
+  --color-text-main: #f8fafc;
+  --color-text-muted: #94a3b8;
+  
+  --font-heading: 'Cinzel', serif;
+  --font-body: 'Lato', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-bg-darker);
+  color: var(--color-text-main);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+  width: 100%;
+}
+
+.horoscope-section-wrapper {
+  min-height: 20px; /* Placeholder to prevent layout jump */
+  margin-top: 2rem;
+}
+
+.footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #000000;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  margin-top: auto;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-darker);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}

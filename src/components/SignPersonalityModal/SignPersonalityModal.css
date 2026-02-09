@@ -1,0 +1,168 @@
+.personality-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    animation: fadeIn 0.3s ease-out;
+}
+
+.personality-modal-content {
+    width: 90%;
+    max-width: 1200px;
+    height: 80vh;
+    background: linear-gradient(135deg, rgba(20, 20, 40, 0.95), rgba(10, 10, 25, 0.98));
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    box-shadow: 0 0 50px rgba(255, 215, 0, 0.1);
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.personality-modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 3rem;
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    z-index: 10;
+    transition: color 0.3s;
+    line-height: 1;
+}
+
+.personality-modal-close:hover {
+    color: #ffd700;
+}
+
+.personality-modal-body {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.personality-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    position: relative;
+}
+
+.personality-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.2));
+    animation: float 6s ease-in-out infinite;
+}
+
+.personality-text-container {
+    flex: 1;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; Removed to allow scrolling from top */
+    background: rgba(255, 255, 255, 0.02);
+    border-left: 1px solid rgba(255, 215, 0, 0.1);
+    overflow-y: auto;
+    max-height: 100%;
+    /* Ensure it doesn't overflow parent */
+}
+
+/* Custom Scrollbar for text container */
+.personality-text-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.personality-text-container::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.personality-text-container::-webkit-scrollbar-thumb {
+    background: rgba(255, 215, 0, 0.5);
+    border-radius: 4px;
+}
+
+.personality-text-container::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 215, 0, 0.8);
+}
+
+.personality-title {
+    font-family: 'Cinzel', serif;
+    font-size: 2.5rem;
+    color: #ffd700;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 10px rgba(255, 215, 0, 0.3);
+}
+
+.personality-divider {
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #ffd700, transparent);
+    margin-bottom: 30px;
+}
+
+.personality-description {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #e0e0e0;
+    max-width: 90%;
+    white-space: pre-line;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@media (max-width: 768px) {
+    .personality-modal-body {
+        flex-direction: column;
+        overflow-y: auto;
+    }
+
+    .personality-image-container {
+        height: 40vh;
+        padding: 20px;
+    }
+
+    .personality-text-container {
+        padding: 30px;
+        border-left: none;
+        border-top: 1px solid rgba(255, 215, 0, 0.1);
+    }
+
+    .personality-title {
+        font-size: 2rem;
+    }
+}

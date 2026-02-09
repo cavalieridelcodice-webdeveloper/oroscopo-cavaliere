@@ -1,0 +1,89 @@
+{
+  "date": "2026-02-08",
+  "signs": {
+    "aries": {
+      "rating": 3,
+      "love": "Per il segno del Ariete, l'amore richiede oggi un momento di riflessione.",
+      "work": "Sul fronte professionale, Ariete deve puntare sul recupero energetico.",
+      "luck": "La fortuna per Ariete passerà attraverso piccoli segnali positivi.",
+      "luckyNumber": 80
+    },
+    "taurus": {
+      "rating": 3,
+      "love": "Per il segno del Toro, l'amore richiede oggi un momento di riflessione.",
+      "work": "Sul fronte professionale, Toro deve puntare sul recupero energetico.",
+      "luck": "La fortuna per Toro passerà attraverso piccoli segnali positivi.",
+      "luckyNumber": 46
+    },
+    "gemini": {
+      "rating": 3,
+      "love": "Per il segno del Gemelli, l'amore richiede oggi un momento di riflessione.",
+      "work": "Sul fronte professionale, Gemelli deve puntare sul recupero energetico.",
+      "luck": "La fortuna per Gemelli passerà attraverso piccoli segnali positivi.",
+      "luckyNumber": 37
+    },
+    "cancer": {
+      "rating": 3,
+      "love": "Per il segno del Cancro, l'amore richiede oggi un momento di riflessione.",
+      "work": "Sul fronte professionale, Cancro deve puntare sul recupero energetico.",
+      "luck": "La fortuna per Cancro passerà attraverso piccoli segnali positivi.",
+      "luckyNumber": 73
+    },
+    "leo": {
+      "rating": 3,
+      "love": "Per il segno del Leone, l'amore richiede oggi un momento di riflessione.",
+      "work": "Sul fronte professionale, Leone deve puntare sul recupero energetico.",
+      "luck": "La fortuna per Leone passerà attraverso piccoli segnali positivi.",
+      "luckyNumber": 51
+    },
+    "virgo": {
+      "rating": 3,
+      "love": "Per il segno del Vergine, l'amore richiede oggi un momento di riflessione.",
+      "work": "Sul fronte professionale, Vergine deve puntare sul recupero energetico.",
+      "luck": "La fortuna per Vergine passerà attraverso piccoli segnali positivi.",
+      "luckyNumber": 61
+    },
+    "libra": {
+      "rating": 3,
+      "love": "Per il segno del Bilancia, l'amore richiede oggi un momento di riflessione.",
+      "work": "Sul fronte professionale, Bilancia deve puntare sul recupero energetico.",
+      "luck": "La fortuna per Bilancia passerà attraverso piccoli segnali positivi.",
+      "luckyNumber": 88
+    },
+    "scorpio": {
+      "rating": 3,
+      "love": "Per il segno del Scorpione, l'amore richiede oggi un momento di riflessione.",
+      "work": "Sul fronte professionale, Scorpione deve puntare sul recupero energetico.",
+      "luck": "La fortuna per Scorpione passerà attraverso piccoli segnali positivi.",
+      "luckyNumber": 57
+    },
+    "sagittarius": {
+      "rating": 3,
+      "love": "Per il segno del Sagittario, l'amore richiede oggi un momento di riflessione.",
+      "work": "Sul fronte professionale, Sagittario deve puntare sul recupero energetico.",
+      "luck": "La fortuna per Sagittario passerà attraverso piccoli segnali positivi.",
+      "luckyNumber": 67
+    },
+    "capricorn": {
+      "rating": 3,
+      "love": "Per il segno del Capricorno, l'amore richiede oggi un momento di riflessione.",
+      "work": "Sul fronte professionale, Capricorno deve puntare sul recupero energetico.",
+      "luck": "La fortuna per Capricorno passerà attraverso piccoli segnali positivi.",
+      "luckyNumber": 89
+    },
+    "aquarius": {
+      "rating": 3,
+      "love": "Per il segno del Acquario, l'amore richiede oggi un momento di riflessione.",
+      "work": "Sul fronte professionale, Acquario deve puntare sul recupero energetico.",
+      "luck": "La fortuna per Acquario passerà attraverso piccoli segnali positivi.",
+      "luckyNumber": 19
+    },
+    "pisces": {
+      "rating": 3,
+      "love": "Per il segno del Pesci, l'amore richiede oggi un momento di riflessione.",
+      "work": "Sul fronte professionale, Pesci deve puntare sul recupero energetico.",
+      "luck": "La fortuna per Pesci passerà attraverso piccoli segnali positivi.",
+      "luckyNumber": 38
+    }
+  }
+}
