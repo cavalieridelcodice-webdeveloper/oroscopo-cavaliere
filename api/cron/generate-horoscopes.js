@@ -9,7 +9,7 @@ import { generateAllHoroscopes } from '../../lib/services/geminiService.js';
 import { saveHoroscopes } from '../../lib/services/firebaseService.js';
 
 export const config = {
-    runtime: 'nodejs18.x',
+    runtime: 'nodejs',
     maxDuration: 300 // 5 minutes max for cron job
 };
 
