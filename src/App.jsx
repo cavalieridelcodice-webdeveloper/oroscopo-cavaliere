@@ -87,6 +87,7 @@ function MainApp() {
       </main>
 
       <footer className="app-footer">
+        <p className="footer-notice">Le previsioni astrali si rinnovano quotidianamente con il sorgere di ogni nuovo giorno, a partire dalla mezzanotte.</p>
         <p>© 2026 L'Oroscopo del Cavaliere. Le stelle ti guidano.</p>
         <div className="footer-links">
           <Link to="/privacy" className="footer-link">Privacy Policy</Link>
