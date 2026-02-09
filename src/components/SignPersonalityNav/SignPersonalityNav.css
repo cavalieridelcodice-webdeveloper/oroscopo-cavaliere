@@ -64,9 +64,11 @@
 }
 
 .nav-dropdown.open {
-    max-height: 500px;
-    /* Adjust based on content */
+    max-height: 300px;
+    /* Reduced to ensure it fits on small screens */
+    overflow-y: auto;
     opacity: 1;
+    pointer-events: auto;
 }
 
 .nav-list {

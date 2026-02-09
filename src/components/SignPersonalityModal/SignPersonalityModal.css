@@ -16,7 +16,7 @@
 .personality-modal-content {
     width: 90%;
     max-width: 1200px;
-    height: 80vh;
+    height: 85vh;
     background: linear-gradient(135deg, rgba(20, 20, 40, 0.95), rgba(10, 10, 25, 0.98));
     border: 1px solid rgba(255, 215, 0, 0.3);
     box-shadow: 0 0 50px rgba(255, 215, 0, 0.1);
@@ -149,6 +149,14 @@
     .personality-modal-body {
         flex-direction: column;
         overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        /* Smooth scrolling on iOS */
+    }
+
+    .personality-modal-content {
+        height: 90vh;
+        /* More height on mobile */
+        width: 95%;
     }
 
     .personality-image-container {
